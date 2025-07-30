@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/user/ontologies/2025/6/fpso_equipments"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/user/ontologies/2025/6/fpso_equipments">
+    <Prefix name="" IRI="http://www.semanticweb.org/user/ontologies/2025/6/fpso_equipments/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>file:/C:/OntoCAPE/OntoCAPE/OntoCAPE.owl</Import>
+    <Import>file:/C:/OntoCAPE/OntoCAPE/chemical_process_system/chemical_process_system.owl</Import>
+    <Import>file:/C:/OntoCAPE/OntoCAPE/chemical_process_system/process_units/chemical_reactor.owl</Import>
+    <Import>file:/C:/OntoCAPE/OntoCAPE/chemical_process_system/process_units/distillation_system.owl</Import>
+    <Import>file:/C:/OntoCAPE/OntoCAPE/chemical_process_system/process_units/flash_unit.owl</Import>
+    <Import>file:/C:/OntoCAPE/OntoCAPE/chemical_process_system/process_units/heat_transfer_unit.owl</Import>
+    <Import>file:/C:/OntoCAPE/OntoCAPE/chemical_process_system/process_units/mixing_unit.owl</Import>
+    <Import>file:/C:/OntoCAPE/OntoCAPE/chemical_process_system/process_units/splitting_unit.owl</Import>
+    <Declaration>
+        <NamedIndividual IRI="#FPSO"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GasStream"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PreAquecedorEstabilizador"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RawOilStream"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SeparadorTrifasico"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SplittedOilStream"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SplittedWaterStream"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#StabilizedOilStream"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Stabilizer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TestSeparator"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TremSeparacaoEstabilizacao"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="file:/C:/OntoCAPE/OntoCAPE/chemical_process_system/CPS_realization/plant.owl#Plant"/>
+        <NamedIndividual IRI="#FPSO"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="file:/C:/OntoCAPE/OntoCAPE/chemical_process_system/process_units/distillation_system.owl#GaseousMaterialStream"/>
+        <NamedIndividual IRI="#GasStream"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="file:/C:/OntoCAPE/OntoCAPE/chemical_process_system/process_units/heat_transfer_unit.owl#HeatExchanger"/>
+        <NamedIndividual IRI="#PreAquecedorEstabilizador"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="file:/C:/OntoCAPE/OntoCAPE/chemical_process_system/process_units/distillation_system.owl#LiquidMaterialStream"/>
+        <NamedIndividual IRI="#RawOilStream"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="file:/C:/OntoCAPE/OntoCAPE/chemical_process_system/process_units/splitting_unit.owl#SplittingUnit"/>
+        <NamedIndividual IRI="#SeparadorTrifasico"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="file:/C:/OntoCAPE/OntoCAPE/chemical_process_system/process_units/distillation_system.owl#LiquidMaterialStream"/>
+        <NamedIndividual IRI="#SplittedOilStream"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="file:/C:/OntoCAPE/OntoCAPE/chemical_process_system/process_units/distillation_system.owl#LiquidMaterialStream"/>
+        <NamedIndividual IRI="#SplittedWaterStream"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="file:/C:/OntoCAPE/OntoCAPE/chemical_process_system/process_units/distillation_system.owl#LiquidMaterialStream"/>
+        <NamedIndividual IRI="#StabilizedOilStream"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="file:/C:/OntoCAPE/OntoCAPE/chemical_process_system/process_units/distillation_system.owl#DistillationSystem"/>
+        <NamedIndividual IRI="#Stabilizer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="file:/C:/OntoCAPE/OntoCAPE/chemical_process_system/process_units/splitting_unit.owl#SplittingUnit"/>
+        <NamedIndividual IRI="#TestSeparator"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="file:/C:/OntoCAPE/OntoCAPE/chemical_process_system/CPS_realization/plant.owl#GroupOfEquipment"/>
+        <NamedIndividual IRI="#TremSeparacaoEstabilizacao"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="file:/C:/OntoCAPE/OntoCAPE/material/substance/reaction_mechanism.owl#hasProduct"/>
+        <NamedIndividual IRI="#SeparadorTrifasico"/>
+        <NamedIndividual IRI="#GasStream"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="file:/C:/OntoCAPE/OntoCAPE/material/substance/reaction_mechanism.owl#hasProduct"/>
+        <NamedIndividual IRI="#SeparadorTrifasico"/>
+        <NamedIndividual IRI="#SplittedOilStream"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="file:/C:/OntoCAPE/OntoCAPE/material/substance/reaction_mechanism.owl#hasProduct"/>
+        <NamedIndividual IRI="#SeparadorTrifasico"/>
+        <NamedIndividual IRI="#SplittedWaterStream"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="file:/C:/OntoCAPE/OntoCAPE/upper_level/network_system.owl#hasInput"/>
+        <NamedIndividual IRI="#SeparadorTrifasico"/>
+        <NamedIndividual IRI="#RawOilStream"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="file:/C:/OntoCAPE/OntoCAPE/upper_level/network_system.owl#hasInput"/>
+        <NamedIndividual IRI="#Stabilizer"/>
+        <NamedIndividual IRI="#SplittedOilStream"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="file:/C:/OntoCAPE/OntoCAPE/upper_level/network_system.owl#hasOutput"/>
+        <NamedIndividual IRI="#Stabilizer"/>
+        <NamedIndividual IRI="#StabilizedOilStream"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="file:/C:/OntoCAPE/OntoCAPE/upper_level/system.owl#hasAspectSystem"/>
+        <NamedIndividual IRI="#TremSeparacaoEstabilizacao"/>
+        <NamedIndividual IRI="#SeparadorTrifasico"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="file:/C:/OntoCAPE/OntoCAPE/upper_level/system.owl#hasAspectSystem"/>
+        <NamedIndividual IRI="#TremSeparacaoEstabilizacao"/>
+        <NamedIndividual IRI="#Stabilizer"/>
+    </ObjectPropertyAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RawOilStream</IRI>
+        <Literal>RawOilStream</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SeparadorTrifasico</IRI>
+        <Literal>TriphasicSeparator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TremSeparacaoEstabilizacao</IRI>
+        <Literal>TremSeparacaoEstabilizacao</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

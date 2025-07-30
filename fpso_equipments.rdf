@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/user/ontologies/2025/6/fpso_equipments/"
+     xml:base="http://www.semanticweb.org/user/ontologies/2025/6/fpso_equipments/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:system="file:/C:/OntoCAPE/OntoCAPE/upper_level/system.owl#"
+     xmlns:network_system="file:/C:/OntoCAPE/OntoCAPE/upper_level/network_system.owl#"
+     xmlns:reaction_mechanism="file:/C:/OntoCAPE/OntoCAPE/material/substance/reaction_mechanism.owl#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/fpso_equipments">
+        <owl:imports rdf:resource="file:/C:/OntoCAPE/OntoCAPE/OntoCAPE.owl"/>
+        <owl:imports rdf:resource="file:/C:/OntoCAPE/OntoCAPE/chemical_process_system/chemical_process_system.owl"/>
+        <owl:imports rdf:resource="file:/C:/OntoCAPE/OntoCAPE/chemical_process_system/process_units/chemical_reactor.owl"/>
+        <owl:imports rdf:resource="file:/C:/OntoCAPE/OntoCAPE/chemical_process_system/process_units/distillation_system.owl"/>
+        <owl:imports rdf:resource="file:/C:/OntoCAPE/OntoCAPE/chemical_process_system/process_units/flash_unit.owl"/>
+        <owl:imports rdf:resource="file:/C:/OntoCAPE/OntoCAPE/chemical_process_system/process_units/heat_transfer_unit.owl"/>
+        <owl:imports rdf:resource="file:/C:/OntoCAPE/OntoCAPE/chemical_process_system/process_units/mixing_unit.owl"/>
+        <owl:imports rdf:resource="file:/C:/OntoCAPE/OntoCAPE/chemical_process_system/process_units/splitting_unit.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/fpso_equipments#FPSO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/fpso_equipments#FPSO">
+        <rdf:type rdf:resource="file:/C:/OntoCAPE/OntoCAPE/chemical_process_system/CPS_realization/plant.owl#Plant"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/fpso_equipments#GasStream -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/fpso_equipments#GasStream">
+        <rdf:type rdf:resource="file:/C:/OntoCAPE/OntoCAPE/chemical_process_system/process_units/distillation_system.owl#GaseousMaterialStream"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/fpso_equipments#PreAquecedorEstabilizador -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/fpso_equipments#PreAquecedorEstabilizador">
+        <rdf:type rdf:resource="file:/C:/OntoCAPE/OntoCAPE/chemical_process_system/process_units/heat_transfer_unit.owl#HeatExchanger"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/fpso_equipments#RawOilStream -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/fpso_equipments#RawOilStream">
+        <rdf:type rdf:resource="file:/C:/OntoCAPE/OntoCAPE/chemical_process_system/process_units/distillation_system.owl#LiquidMaterialStream"/>
+        <rdfs:label>RawOilStream</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/fpso_equipments#SeparadorTrifasico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/fpso_equipments#SeparadorTrifasico">
+        <rdf:type rdf:resource="file:/C:/OntoCAPE/OntoCAPE/chemical_process_system/process_units/splitting_unit.owl#SplittingUnit"/>
+        <reaction_mechanism:hasProduct rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/fpso_equipments#GasStream"/>
+        <reaction_mechanism:hasProduct rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/fpso_equipments#SplittedOilStream"/>
+        <reaction_mechanism:hasProduct rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/fpso_equipments#SplittedWaterStream"/>
+        <network_system:hasInput rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/fpso_equipments#RawOilStream"/>
+        <rdfs:label>TriphasicSeparator</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/fpso_equipments#SplittedOilStream -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/fpso_equipments#SplittedOilStream">
+        <rdf:type rdf:resource="file:/C:/OntoCAPE/OntoCAPE/chemical_process_system/process_units/distillation_system.owl#LiquidMaterialStream"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/fpso_equipments#SplittedWaterStream -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/fpso_equipments#SplittedWaterStream">
+        <rdf:type rdf:resource="file:/C:/OntoCAPE/OntoCAPE/chemical_process_system/process_units/distillation_system.owl#LiquidMaterialStream"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/fpso_equipments#StabilizedOilStream -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/fpso_equipments#StabilizedOilStream">
+        <rdf:type rdf:resource="file:/C:/OntoCAPE/OntoCAPE/chemical_process_system/process_units/distillation_system.owl#LiquidMaterialStream"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/fpso_equipments#Stabilizer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/fpso_equipments#Stabilizer">
+        <rdf:type rdf:resource="file:/C:/OntoCAPE/OntoCAPE/chemical_process_system/process_units/distillation_system.owl#DistillationSystem"/>
+        <network_system:hasInput rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/fpso_equipments#SplittedOilStream"/>
+        <network_system:hasOutput rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/fpso_equipments#StabilizedOilStream"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/fpso_equipments#TestSeparator -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/fpso_equipments#TestSeparator">
+        <rdf:type rdf:resource="file:/C:/OntoCAPE/OntoCAPE/chemical_process_system/process_units/splitting_unit.owl#SplittingUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/fpso_equipments#TremSeparacaoEstabilizacao -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/fpso_equipments#TremSeparacaoEstabilizacao">
+        <rdf:type rdf:resource="file:/C:/OntoCAPE/OntoCAPE/chemical_process_system/CPS_realization/plant.owl#GroupOfEquipment"/>
+        <system:hasAspectSystem rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/fpso_equipments#SeparadorTrifasico"/>
+        <system:hasAspectSystem rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/fpso_equipments#Stabilizer"/>
+        <rdfs:label>TremSeparacaoEstabilizacao</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
